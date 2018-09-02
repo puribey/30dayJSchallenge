@@ -67,14 +67,14 @@
 
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); // saving specific div when pressing down any key 
     key.classList.add('playing'); // can also use remove and toggle 
+  })
 
-    function removeTransition(e){
+  function removeTransition(e){
       if (e.propertyName !== "transform") return;
       this.classList.remove('playing');
     }
     const allKeys = document.querySelectorAll('.key');
     allKeys.forEach(key => key.addEventListener('transitionend', removeTransition)); // when transition ends its going to fire removeTransition function which will take playing class away
-  })
 </script>
 
 
