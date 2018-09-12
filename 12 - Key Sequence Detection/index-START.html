@@ -4,9 +4,33 @@
   <meta charset="UTF-8">
   <title>Key Detection</title>
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <script type="text/javascript" src="https://www.iamcal.com/sharkify/sharkify.js"></script>
+  <style>
+    body, html {
+      height: 100vh;
+      width: 100vw;
+      background-image: url('https://i1.wp.com/soulerfloat.com/wp-content/uploads/2018/01/floating-water-gif.gif?fit=1920%2C1080');
+    }
+  </style>
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secretShark = "puri";
+
+  window.addEventListener('keyup', (e) => {
+    // console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretShark.length -1, pressed.length - secretShark.length);
+
+    if(pressed.join('').includes(secretShark)){
+      // console.log("YEY!")
+      sharkify_add();
+    } 
+    console.log(pressed)
+  });
+
+
 </script>
 </body>
 </html>
