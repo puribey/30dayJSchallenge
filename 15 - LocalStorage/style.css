@@ -1,7 +1,7 @@
 
     html {
       box-sizing: border-box;
-      background:url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+      background:url(pokebg.jpg) center no-repeat;
       background-size:cover;
       min-height:100vh;
       display:flex;
@@ -19,6 +19,12 @@
       border-radius: 50%;
       width:200px;
       margin-bottom: 50px;
+    }
+
+    img {
+      opacity: 0.5;
+      margin-bottom: 40px;
+      width: 200px;
     }
 
     .wrapper {
@@ -64,7 +70,13 @@
     }
 
     .plates input:checked + label:before {
-      content: '🌮';
+      background-image: url(https://cdn6.aptoide.com/imgs/1/e/2/1e2cc1ddc5f4fd44f1dd868dcdbb7908_icon.png?w=256);
+      background-size: 15px 15px;
+      display: inline-block;
+      width: 15px; 
+      height: 15px;
+      background-repeat: no-repeat;
+      content:'';
     }
 
     .add-items {
